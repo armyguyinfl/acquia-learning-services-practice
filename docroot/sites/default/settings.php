@@ -810,6 +810,6 @@ $settings['config_sync_directory'] = 'sites/default/files/config_FleF0-lFn0ge6bw
 
 
 if (file_exists('/var/www/site-php')) {
-  require('/var/www/site-php/docrootstg/docrootstg-settings.inc');
+  require '/var/www/site-php/' . $_ENV['AH_SITE_GROUP'] . '/' . $_ENV['AH_SITE_GROUP'] . '-settings.inc';
 }
 
