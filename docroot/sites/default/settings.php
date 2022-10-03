@@ -794,7 +794,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
+$databases['default']['default'] = array(
   'database' => 'drupal',
   'username' => 'drupal',
   'password' => 'drupal',
@@ -806,3 +806,10 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_FleF0-lFn0ge6bwFwXbterP_M8R__8Gh14YyHBTclfL_g3B6rLYxBEhc7do8mFBf0dQfUhP6WA/sync';
+
+
+
+if (file_exists('/var/www/site-php')) {
+  require('/var/www/site-php/docrootstg/docrootstg-settings.inc');
+}
+
