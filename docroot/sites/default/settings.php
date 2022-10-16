@@ -806,4 +806,9 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/' . $_ENV['AH_SITE_GROUP'] . '/' . $_ENV['AH_SITE_GROUP'] . '-settings.inc';
+}
+
 $settings['config_sync_directory'] = '../config/default';
+
