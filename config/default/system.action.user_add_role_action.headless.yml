@@ -1,0 +1,14 @@
+uuid: 6cbe22fc-91c9-4b96-9be2-1125a5f74586
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.headless
+  module:
+    - user
+id: user_add_role_action.headless
+label: 'Add the Headless Administrator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: headless

@@ -1,0 +1,14 @@
+uuid: d903316c-efdb-4e4c-935e-20707a6a57a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.frontend_preview_headless
+  module:
+    - user
+id: user_add_role_action.frontend_preview_headless
+label: 'Add the Frontend site with preview role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: frontend_preview_headless

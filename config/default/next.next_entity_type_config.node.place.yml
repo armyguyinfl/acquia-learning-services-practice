@@ -1,0 +1,9 @@
+uuid: 025bd464-2bd5-4926-89d2-7e04c0fc61cd
+langcode: en
+status: true
+dependencies: {  }
+id: node.place
+site_resolver: site_selector
+configuration:
+  sites:
+    headless_site: headless_site

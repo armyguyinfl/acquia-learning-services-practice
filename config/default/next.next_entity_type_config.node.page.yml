@@ -1,0 +1,9 @@
+uuid: 4842e7c8-4d98-491e-b52a-dbe0382bc8d6
+langcode: en
+status: true
+dependencies: {  }
+id: node.page
+site_resolver: site_selector
+configuration:
+  sites:
+    headless_site: headless_site

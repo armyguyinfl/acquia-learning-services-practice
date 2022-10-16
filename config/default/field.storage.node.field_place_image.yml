@@ -1,0 +1,25 @@
+uuid: d0ec9c54-feb1-45b1-b8e3-d70261abe3fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+  enforced:
+    module:
+      - acquia_cms_place
+_core:
+  default_config_hash: P04xZ31eyObCACRVuu8DInI4iu7Zpxoo1jx2ScpsYrs
+id: node.field_place_image
+field_name: field_place_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

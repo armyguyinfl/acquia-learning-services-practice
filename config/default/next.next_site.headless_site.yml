@@ -1,0 +1,9 @@
+uuid: 35b1bf73-9301-409d-bfac-1d214e837e34
+langcode: en
+status: true
+dependencies: {  }
+id: headless_site
+label: 'Headless Site'
+base_url: 'http://localhost:3000'
+preview_url: 'http://localhost:3000/api/preview/'
+preview_secret: tZV48csk$g6%

@@ -1,0 +1,64 @@
+# Application 'docroot', environment 'dev'.
+dev:
+  root: /var/www/html/docroot.dev/docroot
+  ac-site: docroot
+  ac-env: dev
+  ac-realm: prod
+  uri: docrootdev.prod.acquia-sites.com
+  dev.livedev:
+    parent: '@docroot.dev'
+    root: /mnt/gfs/docroot.dev/livedev/docroot
+  host: docrootdev.ssh.prod.acquia-sites.com
+  user: docroot.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'docroot', environment 'prod'.
+prod:
+  root: /var/www/html/docroot.prod/docroot
+  ac-site: docroot
+  ac-env: prod
+  ac-realm: prod
+  uri: docroot.prod.acquia-sites.com
+  prod.livedev:
+    parent: '@docroot.prod'
+    root: /mnt/gfs/docroot.prod/livedev/docroot
+  host: docroot.ssh.prod.acquia-sites.com
+  user: docroot.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'docroot', environment 'ra'.
+ra:
+  root: /var/www/html/docroot.ra/docroot
+  ac-site: docroot
+  ac-env: ra
+  ac-realm: prod
+  uri: docrootra.prod.acquia-sites.com
+  ra.livedev:
+    parent: '@docroot.ra'
+    root: /mnt/gfs/docroot.ra/livedev/docroot
+  host: docrootra.ssh.prod.acquia-sites.com
+  user: docroot.ra
+  paths:
+    drush-script: drush9
+
+
+# Application 'docroot', environment 'test'.
+test:
+  root: /var/www/html/docroot.test/docroot
+  ac-site: docroot
+  ac-env: test
+  ac-realm: prod
+  uri: docrootstg.prod.acquia-sites.com
+  test.livedev:
+    parent: '@docroot.test'
+    root: /mnt/gfs/docroot.test/livedev/docroot
+  host: docrootstg.ssh.prod.acquia-sites.com
+  user: docroot.test
+  paths:
+    drush-script: drush9
+
+

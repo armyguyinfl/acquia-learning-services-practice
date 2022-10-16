@@ -1,0 +1,9 @@
+uuid: 1df411b4-c422-4294-acd1-938acd5f03a6
+langcode: en
+status: true
+dependencies: {  }
+id: node.person
+site_resolver: site_selector
+configuration:
+  sites:
+    headless_site: headless_site
