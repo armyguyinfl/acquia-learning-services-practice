@@ -805,4 +805,16 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/de./vendor/bin/acms acms:installfault/files/config_FleF0-lFn0ge6bwFwXbterP_M8R__8Gh14YyHBTclfL_g3B6rLYxBEhc7do8mFBf0dQfUhP6WA/sync';
+
+
+#https://support-acquia.force.com/s/article/add-workaround-for-Drupal-9-4-7-or-9-4-8
+if ($_ENV['AH_SITE_ENVIRONMENT'] = 'prod') {
+  if (file_exists('/var/www/site-php')) {
+    // Workaround for database error
+    $class_loader->addPsr4('Drupal\\mysql\\', 'core/modules/mysql/src/');
+    // Acquia require line
+    require '/var/www/site-php/docrootprod/D9-dev-docroot-settings.inc';
+  }
+}
+
+$settings['config_sync_directory'] = '../config/default';
