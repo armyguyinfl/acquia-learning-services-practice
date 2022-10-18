@@ -1,0 +1,12 @@
+uuid: 46da85fd-db52-445f-9990-b2f5bbf71bfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 0IPdXB4dikl4D5Cdh84CMS3qiD7vasnF4s3wnwH5vco
+id: node.horizontal_card
+label: 'Horizontal card'
+targetEntityType: node
+cache: true
