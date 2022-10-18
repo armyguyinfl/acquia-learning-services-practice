@@ -813,7 +813,7 @@ if ($_ENV['AH_SITE_ENVIRONMENT'] = 'prod') {
     // Workaround for database error
     $class_loader->addPsr4('Drupal\\mysql\\', 'core/modules/mysql/src/');
     // Acquia require line
-    require '/var/www/site-php/docrootprod/D9-dev-docroot-settings.inc';
+    require '/var/www/site-php/docrootprod/D9-prod-docroot-settings.inc';
   }
 }
 
