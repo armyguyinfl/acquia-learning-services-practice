@@ -806,15 +806,41 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 
-
-#https://support-acquia.force.com/s/article/add-workaround-for-Drupal-9-4-7-or-9-4-8
-if ($_ENV['AH_SITE_ENVIRONMENT'] = 'prod') {
-  if (file_exists('/var/www/site-php')) {
-    // Workaround for database error
-    $class_loader->addPsr4('Drupal\\mysql\\', 'core/modules/mysql/src/');
-    // Acquia require line
-    require '/var/www/site-php/docroot/D9-prod-docroot-settings.inc';
+if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+  switch ($_ENV['AH_SITE_ENVIRONMENT']) {
+    case 'dev':
+      if (file_exists('/var/www/site-php')) {
+        // Workaround for database error
+        $class_loader->addPsr4('Drupal\\mysql\\', 'core/modules/mysql/src/');
+        // Acquia require line
+        require '/var/www/site-php/docrootdev/D9-dev-docroot-settings.inc';
+      }
+      break;
+    case 'test':
+      if (file_exists('/var/www/site-php')) {
+        // Workaround for database error
+        $class_loader->addPsr4('Drupal\\mysql\\', 'core/modules/mysql/src/');
+        // Acquia require line
+        require '/var/www/site-php/docrootstg/D9-test-docroot-settings.inc';
+      }
+      break;
+    case 'prod':
+      if (file_exists('/var/www/site-php')) {
+        // Workaround for database error
+        $class_loader->addPsr4('Drupal\\mysql\\', 'core/modules/mysql/src/');
+        // Acquia require line
+        require '/var/www/site-php/docroot/D9-prod-docroot-settings.inc';
+      }
+      break;
+    case 'ra':
+      // do something on ra - necessary if a
+      // Remote Administration environment is present
+      break;
   }
+} else {
+    // do something for a non-Acquia-hosted application
+    // (like a local dev install).
+  ;
 }
 
 $settings['config_sync_directory'] = '../config/default';
