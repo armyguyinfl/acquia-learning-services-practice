@@ -12,6 +12,8 @@
     "require": {
         "php": ">=7.4",
         "acquia/acquia-cms-starterkit": "^1",
+        "acquia/blt": "^13.5",
+        "acquia/blt-ide-local": "^1.1",
         "acquia/drupal-environment-detector": "^1",
         "acquia/http-hmac-php": "6.0.0",
         "acquia/memcache-settings": "^1",
@@ -50,7 +52,8 @@
             "drupal/core-composer-scaffold": true,
             "ergebnis/composer-normalize": true,
             "oomphinc/composer-installers-extender": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "acquia/blt": true
         },
         "platform": {
             "php": "7.4"
@@ -127,6 +130,10 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "blt-ide-local": {
+            "type": "vcs",
+            "url": "https://github.com/pavlosdan/blt-ide-local.git"
         }
     },
     "minimum-stability": "dev",
