@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "acquia/acquia-cms-starterkit": "^1",
         "acquia/blt": "^13.5",
         "acquia/blt-ide-local": "^1.1",
@@ -56,7 +56,7 @@
             "acquia/blt": true
         },
         "platform": {
-            "php": "7.4"
+            "php": "8.0"
         },
         "sort-packages": true
     },
