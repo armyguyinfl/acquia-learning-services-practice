@@ -1,0 +1,17 @@
+project:
+  machine_name: acquia-learning-services
+  prefix: ALS
+  human_name: 'Acquia Learning Services'
+git:
+  hooks:
+    pre-commit: false
+    pre-push: false
+    commit-msg: false
+  remotes:
+    - 'docroot@svn-23659.prod.hosting.acquia.com:docroot.git'
+drush:
+  aliases:
+    remote: dgc.dev
+    local: self
+    ci: self
+  default_alias: '${drush.aliases.local}'
